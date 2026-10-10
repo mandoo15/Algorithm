@@ -34,8 +34,8 @@ int main() {
     for(int i=0; i<t; i++) {
         int temp = arr[2*n-1];
 
-        for(int j=2*n-1; j>=1; j--) {
-            swap(arr[j], arr[j-1]);
+        for (int j = 2*n-1; j >= 1; j--) {
+            arr[j] = arr[j-1];
         }
         //swap(arr[0], arr[2*n-1]);
 
