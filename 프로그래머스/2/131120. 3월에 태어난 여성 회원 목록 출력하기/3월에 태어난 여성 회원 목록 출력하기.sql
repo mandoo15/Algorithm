@@ -1,0 +1,11 @@
+-- 코드를 입력하세요
+
+# MEMBER_PROFILE 테이블에서 생일이 3월인 여성 회원의 ID, 이름, 성별, 생년월일을 조회하는 SQL문
+# 전화번호가 NULL인 경우는 출력대상에서 제외하고, 결과는 회원ID를 기준으로 오름차순
+
+SELECT MEMBER_ID, MEMBER_NAME, GENDER, DATE_OF_BIRTH
+FROM MEMBER_PROFILE
+WHERE TLNO IS NOT NULL
+AND GENDER = 'W'
+AND MONTH(DATE_OF_BIRTH) = 03
+ORDER BY MEMBER_ID ASC;
